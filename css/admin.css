@@ -1,0 +1,212 @@
+/* --- CASHRANK PRESTIGE GLOBAL VARIABLES --- */
+:root {
+  --dark-green: #00241B;
+  --mid-green: #004D40;
+  --neon: #00E676;
+  --gold: #FFD700;
+  --card-bg: #1A1A1A;
+  --text-gray: #94A3B8;
+  --glass: rgba(0, 0, 0, 0.4);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: radial-gradient(circle at center, var(--mid-green), var(--dark-green));
+  color: white;
+  min-height: 100vh;
+  display: flex;
+}
+
+/* --- LAYOUT --- */
+.layout {
+  display: flex;
+  width: 100%;
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+  width: 260px;
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  border-right: 1px solid rgba(255, 215, 0, 0.1);
+  padding: 25px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
+  color: var(--gold);
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  padding: 12px 15px;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 14px;
+  margin-bottom: 4px;
+  transition: all 0.3s ease;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  background: rgba(255, 215, 0, 0.1);
+  color: var(--gold);
+  box-shadow: inset 4px 0 0 var(--gold);
+}
+
+.sidebar hr {
+  margin: 25px 0;
+  border: 0;
+  border-top: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.nav-section {
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--text-gray);
+  padding-left: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+/* --- MAIN CONTENT --- */
+.content {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+/* --- DASHBOARD CARDS --- */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 20px;
+  min-width: 220px;
+  border: 1px solid rgba(255, 215, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold);
+}
+
+/* --- PRESTIGE TABLES --- */
+.table {
+  width: 100%;
+  background: var(--card-bg);
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 25px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.table th, .table td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.table th {
+  background: rgba(255, 215, 0, 0.05);
+  color: var(--gold);
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.table tr:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* --- BADGES & BUTTONS --- */
+.badge {
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.badge.pending {
+  background: rgba(255, 215, 0, 0.15);
+  color: var(--gold);
+}
+
+.badge.success {
+  background: rgba(0, 230, 118, 0.15);
+  color: var(--neon);
+}
+
+button {
+  padding: 10px 18px;
+  margin-right: 6px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 12px;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+
+/* Approve Button */
+button:first-child {
+  background: var(--neon);
+  color: var(--dark-green);
+}
+
+/* Reject Button */
+button:last-child {
+  background: #ef4444;
+  color: white;
+}
+
+button:hover {
+  filter: brightness(1.2);
+  transform: scale(1.05);
+}
+
+button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* --- CHARTS --- */
+.charts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.charts canvas {
+  background: var(--card-bg) !important;
+  padding: 25px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 215, 0, 0.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
