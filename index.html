@@ -1,132 +1,100 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-    <head>
-<meta name="theme-color" content="#22c55e">
+<head>
+    <meta name="theme-color" content="#22c55e">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="CashRank">
+    <link rel="apple-touch-icon" href="../icons/icon-192.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CashRank - Play games, complete offers, and earn real rewards. Instant cashouts to PayPal, Crypto, InstaPay, and local wallets.">
+    <meta name="keywords" content="earn money, rewards app, play to earn, cashrank, make money online, watch videos to earn">
+    <title>CashRank | Play, Earn, Cash Out</title>
+    
+    <link rel="icon" href="https://iili.io/q9uLaWB.png" type="image/png">
+    
+    <link href="./css/output.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="CashRank">
-<link rel="apple-touch-icon" href="../icons/icon-192.png">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="CashRank Prestige - The enterprise-grade reward protocol. Monetize your digital footprint with instant liquidity and high-yield mining.">
-        <meta name="keywords" content="earn money, crypto mining, passive income, cashrank, rewards app">
-        <title>CashRank</title>
+    <style>
+        /* BASE STYLES */
+        body { background-color: #050505; color: #e5e5e5; overflow-x: hidden; font-family: 'Plus Jakarta Sans', sans-serif; }
         
-        <link rel="icon" href="https://iili.io/q9uLaWB.png" type="image/png">
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #000; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #FFD700; }
+
+        /* GRADIENT TEXT */
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #FFD700 0%, #FDB931 50%, #FFEA70 100%);
+            -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+            background-size: 200% auto; animation: shine 4s linear infinite;
+        }
+        @keyframes shine { to { background-position: 200% center; } }
+
+        /* GLASS COMPONENTS */
+        .glass-panel {
+            background: rgba(15, 15, 15, 0.6);
+            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .glass-panel:hover {
+            transform: translateY(-5px);
+            border-color: rgba(34, 197, 94, 0.3);
+        }
+        .nav-glass {
+            background: rgba(5, 5, 5, 0.85);
+            backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* LIVE TICKER */
+        .ticker-wrap { width: 100%; overflow: hidden; background: #000; border-bottom: 1px solid #111; padding: 10px 0; }
+        .ticker { display: flex; animation: ticker 80s linear infinite; width: max-content; }
+        .ticker-item { padding: 0 2rem; font-size: 0.75rem; font-weight: 600; color: #888; display: flex; align-items: center; gap: 8px; }
+        @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+        /* SWIPER */
+        .swiper-pagination-bullet { background: #444; opacity: 1; }
+        .swiper-pagination-bullet-active { background: #22c55e; width: 24px; border-radius: 6px; transition: all 0.3s ease; }
         
-        <link href="./css/output.css" rel="stylesheet">
+        /* PHONE FRAME & ANIMATIONS */
+        .phone-frame {
+            border: 8px solid #111; border-radius: 40px; overflow: hidden; background: #000;
+            box-shadow: 0 30px 60px -15px rgba(0,0,0,0.8), inset 0 0 0 2px rgba(255,255,255,0.05);
+            aspect-ratio: 9/19; width: 100%; max-width: 300px; margin: 0 auto; position: relative;
+        }
+        .phone-notch {
+            position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+            width: 35%; height: 25px; background: #111;
+            border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; z-index: 10;
+        }
         
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    
-        <style>
-            /* BASE STYLES */
-            body { background-color: #030303; color: #e5e5e5; overflow-x: hidden; }
-            
-            /* SCROLLBAR */
-            ::-webkit-scrollbar { width: 6px; }
-            ::-webkit-scrollbar-track { background: #030303; }
-            ::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
-            ::-webkit-scrollbar-thumb:hover { background: #FFD700; }
-    
-            /* GRADIENT TEXT */
-            .text-gradient-gold {
-                background: linear-gradient(135deg, #FFD700 0%, #FDB931 50%, #FFD700 100%);
-                -webkit-background-clip: text;
-                background-clip: text;
-                -webkit-text-fill-color: transparent;
-                background-size: 200% auto;
-                animation: shine 5s linear infinite;
-            }
-            @keyframes shine { to { background-position: 200% center; } }
-    
-            /* GLASS COMPONENTS */
-            .glass-panel {
-                background: rgba(15, 15, 15, 0.6);
-                backdrop-filter: blur(12px);
-                border: 1px solid rgba(255, 255, 255, 0.08);
-            }
-            .nav-glass {
-                background: rgba(3, 3, 3, 0.85);
-                backdrop-filter: blur(20px);
-                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            }
-    
-            /* ANIMATED BACKGROUND */
-            #particles-js {
-                position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 0; pointer-events: none;
-            }
-    
-            /* TICKER - UPDATED SPEED (120s) */
-            .ticker-wrap { width: 100%; overflow: hidden; background: #000; border-bottom: 1px solid #1a1a1a; padding: 10px 0; }
-            .ticker { display: flex; animation: ticker 120s linear infinite; width: max-content; }
-            .ticker-item { padding: 0 2rem; font-size: 0.75rem; font-weight: 600; color: #666; display: flex; align-items: center; gap: 8px; }
-            @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-    
-            /* SWIPER CUSTOMIZATION */
-            .swiper-pagination-bullet { background: #444; opacity: 1; }
-            .swiper-pagination-bullet-active { background: #FFD700; width: 20px; border-radius: 5px; transition: width 0.3s; }
-            
-            /* PHONE FRAME */
-            .phone-frame {
-                border: 10px solid #1a1a1a;
-                border-radius: 40px;
-                overflow: hidden;
-                background: #000;
-                box-shadow: 0 30px 60px -15px rgba(0,0,0,0.8);
-                aspect-ratio: 9/19;
-                width: 100%;
-                max-width: 300px;
-                margin: 0 auto;
-                position: relative;
-            }
-            .phone-notch {
-                position: absolute; top: 0; left: 50%; transform: translateX(-50%);
-                width: 40%; height: 25px; background: #1a1a1a;
-                border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; z-index: 10;
-            }
-    
-            /* LOCKED TIER STYLE */
-            .tier-locked {
-                opacity: 0.4;
-                filter: grayscale(1);
-                position: relative;
-                pointer-events: none;
-                border-style: dashed;
-            }
-            .tier-locked::after {
-                content: "COMING SOON (v2)";
-                position: absolute;
-                top: 50%; left: 50%;
-                transform: translate(-50%, -50%) rotate(-10deg);
-                background: #FFD700;
-                color: black;
-                padding: 8px 16px;
-                font-weight: 900;
-                font-size: 1rem;
-                border: 2px solid white;
-                z-index: 50;
-                white-space: nowrap;
-                box-shadow: 0 10px 30px rgba(0,0,0,0.8);
-            }
-        </style>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4514780597181567"
-        crossorigin="anonymous"></script>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4514780597181567"
-     crossorigin="anonymous"></script>
-    </head>
-<body class="antialiased selection:bg-yellow-500 selection:text-black">
+        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-15px); } 100% { transform: translateY(0px); } }
+        .float-anim { animation: float 6s ease-in-out infinite; }
+        .float-anim-delay { animation: float 6s ease-in-out infinite; animation-delay: 3s; }
+
+        #particles-js { position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 0; pointer-events: none; }
+    </style>
+</head>
+<body class="antialiased selection:bg-green-500 selection:text-black">
 
     <div class="ticker-wrap relative z-50">
-        <div class="ticker" id="dynamic-ticker">
-            </div>
+        <div class="ticker" id="dynamic-ticker"></div>
     </div>
 
-    <nav class="sticky top-0 z-40 nav-glass">
-        <div class="container mx-auto px-4 md:px-6 py-4 flex justify-between items-center">
+    <nav class="sticky top-0 z-40 nav-glass transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="flex items-center gap-3 group">
                 <div class="relative w-10 h-10 flex items-center justify-center">
                     <div class="absolute inset-0 bg-yellow-500 rounded-xl transform rotate-3 group-hover:rotate-12 transition duration-300 opacity-20"></div>
@@ -136,510 +104,428 @@
                 </div>
                 <div class="leading-none">
                     <div class="text-xl font-black text-white tracking-tight">CASH<span class="text-yellow-500">RANK</span></div>
-                    <div class="text-[9px] text-gray-500 font-bold tracking-[0.2em] uppercase">Prestige</div>
+                    <div class="text-[9px] text-green-500 font-bold tracking-[0.2em] uppercase mt-1 flex items-center gap-1">
+                        <div class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></div> Rewards Live
+                    </div>
                 </div>
             </a>
 
-            <div class="hidden md:flex items-center gap-6 lg:gap-8">
-                <a href="#how-it-works" class="text-xs font-bold text-gray-400 hover:text-white uppercase tracking-widest transition">Protocol</a>
-                <a href="#ecosystem" class="text-xs font-bold text-gray-400 hover:text-white uppercase tracking-widest transition">Ecosystem</a>
-                <a href="#tiers" class="text-xs font-bold text-gray-400 hover:text-white uppercase tracking-widest transition">VIP Tiers</a>
+            <div class="hidden lg:flex items-center gap-8 bg-white/5 px-8 py-3 rounded-full border border-white/5">
+                <a href="#earn" class="text-xs font-bold text-gray-300 hover:text-white uppercase tracking-widest transition">How to Earn</a>
+                <a href="#tiers" class="text-xs font-bold text-gray-300 hover:text-white uppercase tracking-widest transition">VIP Tiers</a>
+                <a href="#reviews" class="text-xs font-bold text-gray-300 hover:text-white uppercase tracking-widest transition">Reviews</a>
             </div>
 
-            <a href="#download" class="relative overflow-hidden bg-white text-black px-4 py-2 md:px-8 md:py-3 rounded-full font-bold text-[10px] md:text-xs uppercase tracking-widest hover:bg-yellow-500 transition duration-300 shadow-[0_0_20px_rgba(255,255,255,0.2)] group">
-                <span class="relative z-10">Access System</span>
-                <div class="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+            <a href="https://server.cashrank.online/download" class="relative overflow-hidden bg-green-500 text-black px-6 py-3 rounded-full font-bold text-[10px] md:text-xs uppercase tracking-widest hover:bg-green-400 transition duration-300 shadow-[0_0_15px_rgba(34,197,94,0.3)] group">
+                <span class="relative z-10 flex items-center gap-2"><i class="fab fa-android text-sm"></i> Download App</span>
             </a>
         </div>
     </nav>
 
-    <header class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <header class="relative min-h-[85vh] flex items-center pt-12 pb-20 overflow-hidden">
         <div id="particles-js"></div>
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/80 to-black pointer-events-none z-10"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black pointer-events-none z-10"></div>
         
-        <div class="absolute top-[-20%] right-[-10%] w-[800px] h-[800px] bg-yellow-500/5 rounded-full blur-[150px] animate-pulse"></div>
-        <div class="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-green-500/5 rounded-full blur-[150px]"></div>
+        <div class="absolute top-[10%] right-[10%] w-[500px] h-[500px] bg-yellow-500/10 rounded-full blur-[100px] animate-pulse"></div>
+        <div class="absolute bottom-[0%] left-[0%] w-[500px] h-[500px] bg-green-500/10 rounded-full blur-[100px]"></div>
 
-        <div class="container mx-auto px-6 relative z-20 grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+        <div class="container mx-auto px-6 relative z-20 grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
             
-            <div data-aos="fade-right" data-aos-duration="1000" class="pt-10 lg:pt-0">
-                <div class="inline-flex items-center gap-3 border border-white/10 bg-white/5 backdrop-blur-md rounded-full px-5 py-2 mb-8">
-                    <div class="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_10px_#00E676] animate-pulse"></div>
-                    <span class="text-[10px] font-bold uppercase tracking-widest text-white/80">System Status: <span class="text-green-500">Operational</span></span>
+            <div data-aos="fade-right" data-aos-duration="1000">
+                <div class="inline-flex items-center gap-3 border border-green-500/30 bg-green-500/10 backdrop-blur-md rounded-full px-4 py-2 mb-8">
+                    <i class="fas fa-gift text-green-500 text-xs"></i>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-white">Join 10,000+ Daily Earners</span>
                 </div>
 
-                <h1 class="text-5xl md:text-6xl lg:text-7xl font-black leading-[0.9] mb-6 tracking-tighter">
-                    MONETIZE YOUR <br> 
-                    <span class="text-gradient-gold relative">
-                        EXISTENCE
-                        <svg class="absolute w-full h-3 -bottom-1 left-0 text-yellow-500 opacity-30" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C50.0003 3.00003 150.003 -3.00003 198.003 4.99997" stroke="currentColor" stroke-width="3"/></svg>
-                    </span>
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-black leading-[1.05] mb-6 tracking-tighter">
+                    TURN YOUR TIME <br> 
+                    INTO <span class="text-gradient-gold">REAL CASH.</span>
                 </h1>
                 
-                <p class="text-base md:text-lg text-gray-400 mb-10 max-w-lg leading-relaxed font-light">
-                    The world's first enterprise-grade reward protocol. We share <strong class="text-white">70% of ad revenue</strong> directly with our users. High-yield mining, daily payouts, zero latency.
+                <p class="text-base md:text-lg text-gray-400 mb-10 max-w-lg leading-relaxed">
+                    Play the best new games, complete daily tasks, watch videos, and spin the lucky wheel to earn coins. Cash out instantly to your favorite wallets.
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="https://server.cashrank.online/download" class="glass-panel text-white px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-4 hover:bg-white/10 transition border-white/10 cursor-pointer">
-                        <i class="fas fa-download text-2xl text-green-500"></i>
-                        <div class="text-left leading-none">
-                            <div class="text-[9px] uppercase font-bold opacity-60 mb-1">Direct Install</div>
-                            <div class="text-sm font-black">Download APK</div>
+                    <a href="https://server.cashrank.online/download" class="bg-green-500 text-black px-8 py-4 rounded-xl font-black flex items-center justify-center gap-3 hover:scale-105 transition duration-300 shadow-[0_10px_30px_rgba(34,197,94,0.3)] cursor-pointer">
+                        <i class="fab fa-android text-xl"></i>
+                        <div class="text-left leading-none uppercase tracking-widest text-sm">
+                            Get the App
                         </div>
+                    </a>
+                    <a href="#earn" class="glass-panel text-white px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-3 hover:bg-white/10 transition">
+                        <i class="fas fa-play-circle text-gray-400"></i> See How it Works
                     </a>
                 </div>
 
-                <div class="mt-12 pt-8 border-t border-white/5 flex flex-wrap items-center gap-6 md:gap-8">
+                <div class="mt-12 pt-8 border-t border-white/5 flex gap-8 md:gap-12">
                     <div>
-                        <div class="text-xl md:text-2xl font-black text-white">120+</div>
-                        <div class="text-[9px] md:text-[10px] text-gray-500 uppercase font-bold tracking-wider">Early Adopters</div>
+                        <div class="text-2xl font-black text-white">4.8/5</div>
+                        <div class="text-[10px] text-yellow-500 uppercase font-bold tracking-widest mt-1 flex gap-1"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                     </div>
-                    <div class="w-px h-8 bg-white/10"></div>
                     <div>
-                        <div class="text-xl md:text-2xl font-black text-yellow-500">$750.00</div>
-                        <div class="text-[9px] md:text-[10px] text-gray-500 uppercase font-bold tracking-wider">Paid Out</div>
-                    </div>
-                    <div class="w-px h-8 bg-white/10"></div>
-                    <div>
-                        <div class="text-xl md:text-2xl font-black text-green-500">5.0</div>
-                        <div class="text-[9px] md:text-[10px] text-gray-500 uppercase font-bold tracking-wider">Early Rating</div>
+                        <div class="text-2xl font-black text-green-500">$750+</div>
+                        <div class="text-[10px] text-gray-500 uppercase font-bold tracking-widest mt-1">Paid to Users</div>
                     </div>
                 </div>
             </div>
 
-            <div class="relative block mt-16 lg:mt-0 pb-16 lg:pb-0" data-aos="fade-left" data-aos-duration="1200">
-                <div class="absolute top-10 -left-4 md:-left-12 z-30 bg-[#0F0F0F] border border-white/10 p-3 md:p-4 rounded-2xl shadow-2xl animate-bounce scale-90 md:scale-100">
+            <div class="relative flex justify-center items-center mt-10 lg:mt-0" data-aos="zoom-in" data-aos-duration="1200">
+                
+                <div class="absolute top-10 -left-4 md:-left-12 z-30 glass-panel p-3 rounded-2xl shadow-2xl float-anim border-l-2 border-l-green-500">
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center text-green-500"><i class="fas fa-check"></i></div>
                         <div>
-                            <div class="text-[10px] text-gray-400 font-bold uppercase">Payment Sent</div>
-                            <div class="text-base md:text-lg font-black text-white">$750.00 USD</div>
+                            <div class="text-[10px] text-gray-400 font-bold uppercase tracking-wider">Withdrawal Success</div>
+                            <div class="text-sm font-black text-white">+$15.00 InstaPay</div>
                         </div>
                     </div>
                 </div>
 
-                <div class="absolute bottom-20 -right-4 md:-right-8 z-30 bg-[#0F0F0F] border border-white/10 p-3 md:p-4 rounded-2xl shadow-2xl animate-bounce scale-90 md:scale-100" style="animation-delay: 2s;">
+                <div class="absolute bottom-20 -right-4 md:-right-12 z-30 glass-panel p-3 rounded-2xl shadow-2xl float-anim-delay border-l-2 border-l-yellow-500">
                     <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-full bg-yellow-500/20 flex items-center justify-center text-yellow-500"><i class="fas fa-trophy"></i></div>
+                        <div class="w-10 h-10 rounded-full bg-yellow-500/20 flex items-center justify-center text-yellow-500"><i class="fas fa-play"></i></div>
                         <div>
-                            <div class="text-[10px] text-gray-400 font-bold uppercase">New Rank</div>
-                            <div class="text-base md:text-lg font-black text-white">ELITE TIER</div>
+                            <div class="text-[10px] text-gray-400 font-bold uppercase tracking-wider">Video Reward</div>
+                            <div class="text-sm font-black text-white">+50 Coins Added</div>
                         </div>
                     </div>
                 </div>
 
-                <div class="phone-frame transform rotate-[-5deg] hover:rotate-0 transition duration-500">
+                <div class="phone-frame float-anim transform rotate-[-3deg] hover:rotate-0 transition duration-500">
                     <div class="phone-notch"></div>
-                    <div class="w-full h-full bg-[#050505] flex flex-col relative">
-                        <div class="px-6 pt-12 pb-4 flex justify-between items-center">
+                    <div class="w-full h-full bg-[#050505] flex flex-col relative bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]">
+                        <div class="absolute inset-0 bg-gradient-to-b from-black/20 to-black/90"></div>
+                        
+                        <div class="px-5 pt-14 pb-4 flex justify-between items-center relative z-10 border-b border-white/5">
                             <div class="flex items-center gap-3">
-                                <div class="w-8 h-8 rounded-full overflow-hidden border border-yellow-500/50">
-                                    <img src="https://iili.io/fbUFPyJ.jpg" alt="User Avatar" class="w-full h-full object-cover">
-                                </div>
+                                <div class="w-8 h-8 rounded-full bg-yellow-500 flex items-center justify-center text-black font-black text-xs shadow-lg">ME</div>
                                 <div>
-                                    <div class="text-[10px] text-gray-400">Welcome back</div>
+                                    <div class="text-[9px] text-gray-400 uppercase tracking-widest font-bold">Welcome Back</div>
                                     <div class="text-xs font-bold text-white">MrMeRoOo</div>
                                 </div>
                             </div>
-                            <i class="fas fa-bell text-gray-500"></i>
+                            <i class="fas fa-bell text-gray-400 text-sm"></i>
                         </div>
                         
-                        <div class="flex-1 overflow-hidden p-4 space-y-4">
-                            <div class="bg-gradient-to-br from-[#222] to-black p-5 rounded-3xl border border-yellow-500/20 relative overflow-hidden">
-                                <div class="absolute top-0 right-0 w-20 h-20 bg-yellow-500/10 rounded-full blur-xl"></div>
-                                <div class="flex justify-between items-start mb-6">
-                                    <div class="w-8 h-6 bg-gradient-to-r from-yellow-600 to-yellow-800 rounded-md"></div>
-                                    <span class="text-[9px] font-bold text-yellow-500 border border-yellow-500/20 px-2 py-1 rounded-full">PRESTIGE</span>
+                        <div class="flex-1 p-5 space-y-4 relative z-10">
+                            <div class="bg-gradient-to-br from-[#1a1a1a] to-black p-5 rounded-3xl border border-yellow-500/30 relative overflow-hidden shadow-xl">
+                                <div class="absolute -right-10 -top-10 w-32 h-32 bg-yellow-500/10 rounded-full blur-2xl"></div>
+                                <div class="flex justify-between items-start mb-4">
+                                    <i class="fas fa-coins text-2xl text-yellow-500 drop-shadow-[0_0_8px_rgba(255,215,0,0.5)]"></i>
+                                    <span class="text-[9px] font-black text-black bg-yellow-500 px-3 py-1 rounded-full uppercase tracking-widest">Elite Tier</span>
                                 </div>
-                                <div class="text-gray-500 text-[9px] uppercase font-bold tracking-widest mb-1">Total Balance</div>
-                                <div class="text-3xl font-black text-white">$6,400.50</div>
+                                <div class="text-gray-400 text-[10px] uppercase font-bold tracking-widest mb-1">Your Balance</div>
+                                <div class="text-3xl font-black text-white tracking-tight">12,450</div>
+                                <div class="text-[10px] text-green-500 mt-1 font-bold">≈ $12.45 USD</div>
                             </div>
 
-                            <div class="grid grid-cols-2 gap-3">
-                                <div class="bg-white/5 p-3 rounded-2xl flex flex-col items-center justify-center gap-2 aspect-square">
-                                    <i class="fas fa-gamepad text-2xl text-green-500"></i>
-                                    <span class="text-[10px] font-bold text-gray-300">Arcade</span>
+                            <div class="grid grid-cols-2 gap-3 mt-4">
+                                <div class="bg-white/5 border border-white/5 p-4 rounded-2xl flex flex-col items-center gap-3">
+                                    <i class="fas fa-gamepad text-2xl text-blue-500"></i>
+                                    <span class="text-[10px] font-bold text-gray-300 uppercase tracking-wider">Play Games</span>
                                 </div>
-                                <div class="bg-white/5 p-3 rounded-2xl flex flex-col items-center justify-center gap-2 aspect-square">
-                                    <i class="fas fa-server text-2xl text-yellow-500"></i>
-                                    <span class="text-[10px] font-bold text-gray-300">Mining</span>
-                                </div>
-                                <div class="bg-white/5 p-3 rounded-2xl flex flex-col items-center justify-center gap-2 aspect-square">
-                                    <i class="fas fa-video text-2xl text-red-500"></i>
-                                    <span class="text-[10px] font-bold text-gray-300">Videos</span>
-                                </div>
-                                <div class="bg-white/5 p-3 rounded-2xl flex flex-col items-center justify-center gap-2 aspect-square">
-                                    <i class="fas fa-users text-2xl text-blue-500"></i>
-                                    <span class="text-[10px] font-bold text-gray-300">Refer</span>
+                                <div class="bg-white/5 border border-white/5 p-4 rounded-2xl flex flex-col items-center gap-3">
+                                    <i class="fas fa-video text-2xl text-purple-500"></i>
+                                    <span class="text-[10px] font-bold text-gray-300 uppercase tracking-wider">Watch Videos</span>
                                 </div>
                             </div>
+                            
+                            <button class="w-full py-3 mt-2 bg-green-500 text-black font-black text-xs uppercase tracking-widest rounded-xl flex justify-center items-center gap-2 shadow-[0_0_15px_rgba(34,197,94,0.3)]">
+                                <i class="fas fa-wallet"></i> Cash Out Now
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
-            </div>
+        </div>
     </header>
 
-    <div class="border-y border-white/5 bg-black/50 py-10">
+    <div class="border-y border-white/5 bg-[#080808] py-8 relative z-20">
         <div class="container mx-auto px-6">
-            <p class="text-center text-[10px] font-bold uppercase tracking-[0.3em] text-gray-600 mb-8">Integrated With Global Partners</p>
-            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12 lg:gap-24 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
-                <i class="fab fa-google text-3xl md:text-4xl hover:text-white transition"></i>
-                <i class="fab fa-paypal text-3xl md:text-4xl hover:text-blue-500 transition"></i>
-                <i class="fab fa-bitcoin text-3xl md:text-4xl hover:text-orange-500 transition"></i>
-                <i class="fab fa-amazon text-3xl md:text-4xl hover:text-white transition"></i>
-                <i class="fab fa-unity text-3xl md:text-4xl hover:text-white transition"></i>
+            <p class="text-center text-[10px] font-bold uppercase tracking-[0.3em] text-gray-500 mb-6">Cash Out Your Way</p>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-14 opacity-60 hover:opacity-100 transition-all duration-500">
+                <div class="flex items-center gap-2 text-xl font-bold text-purple-400"><i class="fas fa-bolt"></i> InstaPay</div>
+                <div class="flex items-center gap-2 text-xl font-bold text-cyan-400"><i class="fas fa-credit-card"></i> Telda</div>
+                <div class="flex items-center gap-2 text-xl font-bold text-red-500"><i class="fas fa-mobile-screen-button"></i> Vodafone Cash</div>
+                <img src="https://api.iconify.design/cryptocurrency-color:usdt.svg" class="h-8 md:h-9 hover:scale-110 transition cursor-pointer" alt="USDT">
+                <i class="fab fa-paypal text-3xl md:text-4xl hover:text-blue-500 transition cursor-pointer" title="PayPal"></i>
             </div>
         </div>
     </div>
 
-    <section id="how-it-works" class="py-20 md:py-32 bg-[#030303] relative">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row gap-16">
-                <div class="md:w-1/3 md:sticky md:top-32 h-fit" data-aos="fade-right">
-                    <span class="text-yellow-500 font-bold text-xs uppercase tracking-[0.2em] mb-4 block">The Protocol</span>
-                    <h2 class="text-4xl md:text-5xl font-black text-white mb-6">Transparency <br> by Design.</h2>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-8">
-                        Most apps hide their revenue model. We don't. We built an automated engine that shares 70% of ad revenue directly with you.
-                    </p>
-                    <a href="#download" class="text-yellow-500 text-sm font-bold border-b border-yellow-500 pb-1 hover:text-white hover:border-white transition">Start Earning Now <i class="fas fa-arrow-right ml-2"></i></a>
-                </div>
-
-                <div class="md:w-2/3 space-y-8">
-                    <div class="glass-panel p-6 md:p-8 rounded-3xl border-l-4 border-l-blue-500 relative overflow-hidden group" data-aos="fade-up">
-                        <div class="absolute right-0 top-0 text-[8rem] md:text-[10rem] font-black text-white/5 -mt-8 -mr-8 transition group-hover:text-white/10">01</div>
-                        <div class="relative z-10">
-                            <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center text-blue-500 mb-6"><i class="fas fa-briefcase text-xl"></i></div>
-                            <h3 class="text-xl md:text-2xl font-bold text-white mb-3">Advertisers Pay Us</h3>
-                            <p class="text-sm text-gray-400 leading-relaxed">Brands pay CashRank to display their apps, videos, and surveys on our platform. This creates the liquidity pool.</p>
-                        </div>
-                    </div>
-
-                    <div class="glass-panel p-6 md:p-8 rounded-3xl border-l-4 border-l-green-500 relative overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
-                        <div class="absolute right-0 top-0 text-[8rem] md:text-[10rem] font-black text-white/5 -mt-8 -mr-8 transition group-hover:text-white/10">02</div>
-                        <div class="relative z-10">
-                            <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center text-green-500 mb-6"><i class="fas fa-fingerprint text-xl"></i></div>
-                            <h3 class="text-xl md:text-2xl font-bold text-white mb-3">You Engage</h3>
-                            <p class="text-sm text-gray-400 leading-relaxed">You participate by playing games, mining, or watching content. Your activity generates value for the advertisers.</p>
-                        </div>
-                    </div>
-
-                    <div class="glass-panel p-6 md:p-8 rounded-3xl border-l-4 border-l-yellow-500 relative overflow-hidden group" data-aos="fade-up" data-aos-delay="200">
-                        <div class="absolute right-0 top-0 text-[8rem] md:text-[10rem] font-black text-white/5 -mt-8 -mr-8 transition group-hover:text-white/10">03</div>
-                        <div class="relative z-10">
-                            <div class="w-12 h-12 bg-yellow-500/20 rounded-xl flex items-center justify-center text-yellow-500 mb-6"><i class="fas fa-coins text-xl"></i></div>
-                            <h3 class="text-xl md:text-2xl font-bold text-white mb-3">We Pay You</h3>
-                            <p class="text-sm text-gray-400 leading-relaxed">Our smart contract engine automatically disburses 70% of the revenue to your wallet. Withdraw instantly via PayPal or Crypto.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="ecosystem" class="py-20 md:py-32 overflow-hidden relative">
-        <div class="container mx-auto px-6 mb-16 text-center">
-            <span class="text-green-500 font-bold text-xs uppercase tracking-[0.2em]">The Ecosystem</span>
-            <h2 class="text-3xl md:text-4xl font-black text-white mt-4">A Suite of Earning Tools</h2>
+    <section id="earn" class="py-24 bg-[#050505] overflow-hidden relative border-b border-white/5">
+        <div class="container mx-auto px-6 mb-16 text-center" data-aos="fade-up">
+            <span class="text-green-500 font-bold text-xs uppercase tracking-[0.2em]">Start Earning</span>
+            <h2 class="text-3xl md:text-5xl font-black text-white mt-4">Fun Ways to Get Paid</h2>
+            <p class="text-gray-400 mt-4 max-w-2xl mx-auto text-sm">We share our advertising revenue with you. Simply interact with the app and watch your coin balance grow.</p>
         </div>
 
-        <div class="swiper mySwiper w-full max-w-6xl mx-auto px-6">
-            <div class="swiper-wrapper pb-12">
+        <div class="swiper mySwiper w-full max-w-6xl mx-auto px-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper-wrapper pb-16">
+                
                 <div class="swiper-slide">
-                    <div class="glass-panel p-6 md:p-8 rounded-3xl h-full border-t border-white/10 hover:border-yellow-500/50 transition duration-500 group">
-                        <div class="h-48 bg-gradient-to-br from-gray-900 to-black rounded-2xl mb-6 flex items-center justify-center border border-white/5 relative overflow-hidden">
-                            <div class="absolute inset-0 bg-[url('https://placehold.co/600x400/111/333?text=Mining+UI')] bg-cover bg-center opacity-50 group-hover:scale-110 transition duration-700"></div>
-                            <i class="fas fa-server text-4xl text-yellow-500 relative z-10"></i>
+                    <div class="glass-panel p-6 rounded-3xl h-full">
+                        <div class="h-40 bg-gradient-to-br from-gray-900 to-black rounded-2xl mb-6 flex items-center justify-center border border-white/5">
+                            <i class="fas fa-tasks text-5xl text-blue-500 drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-2">Cloud Mining V3</h3>
-                        <p class="text-xs text-gray-400">Passive income. Activate the vault and let our servers do the work while you sleep.</p>
+                        <h3 class="text-xl font-bold text-white mb-2">High-Paying Offers</h3>
+                        <p class="text-[13px] text-gray-400">Download new apps, complete surveys, and test out services to earn massive coin bounties instantly.</p>
                     </div>
                 </div>
 
                 <div class="swiper-slide">
-                    <div class="glass-panel p-6 md:p-8 rounded-3xl h-full border-t border-white/10 hover:border-yellow-500/50 transition duration-500 group">
-                        <div class="h-48 bg-gradient-to-br from-gray-900 to-black rounded-2xl mb-6 flex items-center justify-center border border-white/5 relative overflow-hidden">
-                            <div class="absolute inset-0 bg-[url('https://placehold.co/600x400/111/333?text=Spin+Wheel')] bg-cover bg-center opacity-50 group-hover:scale-110 transition duration-700"></div>
-                            <i class="fas fa-dharmachakra text-4xl text-purple-500 relative z-10"></i>
+                    <div class="glass-panel p-6 rounded-3xl h-full">
+                        <div class="h-40 bg-gradient-to-br from-gray-900 to-black rounded-2xl mb-6 flex items-center justify-center border border-white/5">
+                            <i class="fas fa-gamepad text-5xl text-green-500 drop-shadow-[0_0_15px_rgba(34,197,94,0.5)]"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-2">Lucky Vault</h3>
-                        <p class="text-xs text-gray-400">Spin the Titanium Wheel. Win instant cash prizes, crypto multipliers, and golden keys.</p>
+                        <h3 class="text-xl font-bold text-white mb-2">Play Games</h3>
+                        <p class="text-[13px] text-gray-400">Discover and play fun games right in the app. The longer you play, the more coins you collect.</p>
                     </div>
                 </div>
 
                 <div class="swiper-slide">
-                    <div class="glass-panel p-6 md:p-8 rounded-3xl h-full border-t border-white/10 hover:border-yellow-500/50 transition duration-500 group">
-                        <div class="h-48 bg-gradient-to-br from-gray-900 to-black rounded-2xl mb-6 flex items-center justify-center border border-white/5 relative overflow-hidden">
-                            <div class="absolute inset-0 bg-[url('https://placehold.co/600x400/111/333?text=Scratch+Card')] bg-cover bg-center opacity-50 group-hover:scale-110 transition duration-700"></div>
-                            <i class="fas fa-ticket text-4xl text-green-500 relative z-10"></i>
+                    <div class="glass-panel p-6 rounded-3xl h-full">
+                        <div class="h-40 bg-gradient-to-br from-gray-900 to-black rounded-2xl mb-6 flex items-center justify-center border border-white/5">
+                            <i class="fas fa-video text-5xl text-yellow-500 drop-shadow-[0_0_15px_rgba(255,215,0,0.5)]"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-2">Scratch & Win</h3>
-                        <p class="text-xs text-gray-400">Digital scratch-offs. Reveal 3 matching symbols to win the jackpot instantly.</p>
+                        <h3 class="text-xl font-bold text-white mb-2">Watch Videos</h3>
+                        <p class="text-[13px] text-gray-400">Sit back, relax, and watch short sponsored video clips. Earn coins automatically after every view.</p>
                     </div>
                 </div>
 
                 <div class="swiper-slide">
-                    <div class="glass-panel p-6 md:p-8 rounded-3xl h-full border-t border-white/10 hover:border-yellow-500/50 transition duration-500 group">
-                        <div class="h-48 bg-gradient-to-br from-gray-900 to-black rounded-2xl mb-6 flex items-center justify-center border border-white/5 relative overflow-hidden">
-                            <div class="absolute inset-0 bg-[url('https://placehold.co/600x400/111/333?text=Quiz+UI')] bg-cover bg-center opacity-50 group-hover:scale-110 transition duration-700"></div>
-                            <i class="fas fa-brain text-4xl text-blue-500 relative z-10"></i>
+                    <div class="glass-panel p-6 rounded-3xl h-full">
+                        <div class="h-40 bg-gradient-to-br from-gray-900 to-black rounded-2xl mb-6 flex items-center justify-center border border-white/5">
+                            <i class="fas fa-dharmachakra text-5xl text-purple-500 drop-shadow-[0_0_15px_rgba(168,85,247,0.5)]"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-2">Brain Train</h3>
-                        <p class="text-xs text-gray-400">Solve quick math puzzles. The faster you answer, the higher your reward multiplier.</p>
-                    </div>
-                </div>
-
-                 <div class="swiper-slide">
-                    <div class="glass-panel p-6 md:p-8 rounded-3xl h-full border-t border-white/10 hover:border-yellow-500/50 transition duration-500 group">
-                        <div class="h-48 bg-gradient-to-br from-gray-900 to-black rounded-2xl mb-6 flex items-center justify-center border border-white/5 relative overflow-hidden">
-                            <div class="absolute inset-0 bg-[url('https://placehold.co/600x400/111/333?text=Calendar')] bg-cover bg-center opacity-50 group-hover:scale-110 transition duration-700"></div>
-                            <i class="fas fa-calendar-check text-4xl text-white relative z-10"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-2">Daily Streaks</h3>
-                        <p class="text-xs text-gray-400">Login everyday to increase your rank. 7-day streaks unlock the Golden Chest.</p>
+                        <h3 class="text-xl font-bold text-white mb-2">Lucky Spin Wheel</h3>
+                        <p class="text-[13px] text-gray-400">Feeling lucky? Spin the wheel every day for a chance to win instant cash multipliers and jackpots.</p>
                     </div>
                 </div>
 
                 <div class="swiper-slide">
-                    <div class="glass-panel p-6 md:p-8 rounded-3xl h-full border-t border-white/10 hover:border-yellow-500/50 transition duration-500 group">
-                        <div class="h-48 bg-gradient-to-br from-gray-900 to-black rounded-2xl mb-6 flex items-center justify-center border border-white/5 relative overflow-hidden">
-                            <div class="absolute inset-0 bg-[url('https://placehold.co/600x400/111/333?text=Games+UI')] bg-cover bg-center opacity-50 group-hover:scale-110 transition duration-700"></div>
-                            <i class="fas fa-gamepad text-4xl text-green-500 relative z-10"></i>
+                    <div class="glass-panel p-6 rounded-3xl h-full">
+                        <div class="h-40 bg-gradient-to-br from-gray-900 to-black rounded-2xl mb-6 flex items-center justify-center border border-white/5">
+                            <i class="fas fa-users text-5xl text-pink-500 drop-shadow-[0_0_15px_rgba(236,72,153,0.5)]"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-2">P2E Arcade</h3>
-                        <p class="text-xs text-gray-400">Play premium HTML5 games. Earn per minute. Climb the weekly leaderboards for jackpots.</p>
+                        <h3 class="text-xl font-bold text-white mb-2">Refer Friends</h3>
+                        <p class="text-[13px] text-gray-400">Invite your friends to CashRank. You will earn a lifetime percentage of all the coins they earn!</p>
                     </div>
                 </div>
+
             </div>
             <div class="swiper-pagination"></div>
         </div>
     </section>
 
-    <section id="tiers" class="py-20 md:py-32 bg-black border-y border-white/5">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16 md:mb-20">
-                <span class="text-gray-500 font-bold text-xs uppercase tracking-[0.2em]">Progression</span>
-                <h2 class="text-3xl md:text-4xl font-black text-white mt-4">Elite Status Levels</h2>
+    <section id="tiers" class="py-24 bg-[#080808] border-b border-white/5 relative">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-yellow-500 font-bold text-xs uppercase tracking-[0.2em]">Level Up</span>
+                <h2 class="text-3xl md:text-5xl font-black text-white mt-4">VIP Prestige Tiers</h2>
+                <p class="text-gray-400 text-sm mt-4">Active users get rewarded. Earn more coins per task as you rank up.</p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-[#0F0F0F] p-8 rounded-3xl border border-green-500/30 text-center relative overflow-hidden shadow-[0_0_30px_-10px_rgba(0,230,118,0.2)]">
-                    <div class="inline-block bg-green-500/10 text-green-500 text-[10px] font-bold px-3 py-1 rounded-full mb-4">LIVE NOW</div>
-                    <div class="text-2xl font-black text-gray-400 mb-2">STARTER</div>
-                    <div class="text-4xl font-bold text-white mb-6">30% <span class="text-sm text-gray-500 font-normal">Bonus</span></div>
-                    <ul class="text-left space-y-3 text-sm text-gray-400 mb-8">
-                        <li class="flex items-center gap-3"><i class="fas fa-check text-gray-500"></i> Standard Payout Speed</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-check text-gray-500"></i> Basic Email Support</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-check text-gray-500"></i> Daily Lucky Spin Access</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-check text-gray-500"></i> Basic Mining Speed</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-check text-gray-500"></i> Scratch Cards Unlocked</li>
-                        </ul>
-                    <a href="#download" class="block w-full py-4 bg-green-500 text-black font-bold rounded-xl hover:bg-white transition">Start Free</a>
+            <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+                <div class="bg-[#111] p-8 rounded-3xl border border-white/5 relative opacity-60 filter grayscale pointer-events-none" data-aos="fade-up" data-aos-delay="0">
+                    <div class="absolute inset-0 flex items-center justify-center z-10 bg-black/40 rounded-3xl backdrop-blur-sm">
+                        <div class="border border-white/20 bg-black px-4 py-2 rounded-lg font-bold text-white text-sm tracking-widest uppercase">Coming in V2.0</div>
+                    </div>
+                    <div class="text-lg font-black text-gray-400 mb-2 uppercase">Level 1</div>
+                    <div class="text-3xl font-bold text-white mb-6">Starter</div>
+                    <ul class="space-y-4 text-sm text-gray-400 mb-8">
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Standard Withdrawals</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Access to all Games</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Daily Spin Wheel</li>
+                    </ul>
+                    <div class="block text-center w-full py-3 bg-white/5 text-gray-400 font-bold rounded-xl">Free Forever</div>
                 </div>
 
-                <div class="bg-gradient-to-b from-[#1a1a1a] to-black p-8 rounded-3xl border border-white/5 text-center tier-locked">
-                    <div class="text-3xl font-black text-gray-600 mb-2">ELITE</div>
-                    <div class="text-4xl md:text-5xl font-bold text-gray-700 mb-6">65% <span class="text-sm text-gray-800 font-normal">Bonus</span></div>
-                    <ul class="text-left space-y-3 text-sm text-gray-700 mb-8">
-                        <li class="flex items-center gap-3"><i class="fas fa-lock"></i> Instant Payouts</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-lock"></i> Priority 24/7 Support</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-lock"></i> 2x Mining Speed</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-lock"></i> Access to Beta Features</li>
+                <div class="bg-gradient-to-b from-[#1a1a1a] to-black p-8 rounded-3xl border border-yellow-500/50 relative shadow-[0_0_30px_rgba(255,215,0,0.1)] transform md:-translate-y-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute top-0 right-0 bg-yellow-500 text-black text-[10px] font-black px-4 py-1.5 rounded-bl-xl rounded-tr-3xl uppercase tracking-widest">Active Account</div>
+                    <div class="text-lg font-black text-yellow-500 mb-2 uppercase">Default</div>
+                    <div class="text-4xl font-bold text-white mb-6">Elite <span class="text-sm text-gray-400 font-normal uppercase block mt-1">Full Access</span></div>
+                    <ul class="space-y-4 text-sm text-gray-300 mb-8">
+                        <li class="flex items-center gap-3"><i class="fas fa-bolt text-yellow-500"></i> Fast Withdrawals</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-star text-yellow-500"></i> Premium Surveys</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-gift text-yellow-500"></i> Maximum Rewards</li>
                     </ul>
-                    <button disabled class="block w-full py-4 bg-gray-800 text-gray-500 font-bold rounded-xl cursor-not-allowed">Coming Soon</button>
+                    <a href="https://server.cashrank.online/download" class="block text-center w-full py-4 bg-yellow-500 text-black font-black rounded-xl hover:bg-yellow-400 transition shadow-lg">Start Earning Now</a>
                 </div>
 
-                <div class="bg-[#0F0F0F] p-8 rounded-3xl border border-white/5 text-center tier-locked">
-                    <div class="text-2xl font-black text-gray-600 mb-2">LEGEND</div>
-                    <div class="text-4xl font-bold text-gray-700 mb-6">100% <span class="text-sm text-gray-800 font-normal">Bonus</span></div>
-                    <ul class="text-left space-y-3 text-sm text-gray-700 mb-8">
-                        <li class="flex items-center gap-3"><i class="fas fa-lock"></i> Same-Hour Crypto</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-lock"></i> Dedicated Manager</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-lock"></i> 4x Mining Speed</li>
+                <div class="bg-[#111] p-8 rounded-3xl border border-white/5 relative opacity-60 filter grayscale pointer-events-none" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute inset-0 flex items-center justify-center z-10 bg-black/40 rounded-3xl backdrop-blur-sm">
+                        <div class="border border-white/20 bg-black px-4 py-2 rounded-lg font-bold text-white text-sm tracking-widest uppercase">Coming in V2.0</div>
+                    </div>
+                    <div class="text-lg font-black text-gray-400 mb-2 uppercase">Level 100</div>
+                    <div class="text-3xl font-bold text-white mb-6">Legend</div>
+                    <ul class="space-y-4 text-sm text-gray-400 mb-8">
+                        <li class="flex items-center gap-3"><i class="fas fa-rocket text-green-500"></i> Instant VIP Payouts</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-crown text-yellow-500"></i> Exclusive VIP Support</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-gem text-yellow-500"></i> Double Referral Bonus</li>
                     </ul>
-                    <button disabled class="block w-full py-4 bg-gray-800 text-gray-500 font-bold rounded-xl cursor-not-allowed">Coming Soon</button>
+                    <div class="block text-center w-full py-3 bg-white/5 text-gray-400 font-bold rounded-xl">Unlock by Playing</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="reviews" class="py-20 md:py-32 relative">
+    <section id="reviews" class="py-24 bg-[#050505] border-b border-white/5 relative">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-black text-white text-center mb-16">Global <span class="text-gradient-gold">Evidence.</span></h2>
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-5xl font-black text-white mb-4">Loved by <span class="text-gradient-gold">Users.</span></h2>
+                <p class="text-gray-400 text-sm">Don't just take our word for it. Here is what our players are saying.</p>
+            </div>
             
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="glass-panel p-6 rounded-2xl">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center text-white font-bold">AS</div>
+            <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <div class="glass-panel p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="0">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold border border-white/10">AS</div>
                         <div>
                             <div class="text-white font-bold text-sm">Ahmed S.</div>
-                            <div class="flex text-yellow-500 text-[10px]"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <div class="text-yellow-500 text-[10px]"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                         </div>
                     </div>
-                    <p class="text-sm text-gray-400 italic">"Honestly legit. I withdrew $10 via Vodafone Cash and it arrived in 5 mins. The app is smooth."</p>
+                    <p class="text-sm text-gray-300 leading-relaxed italic">"Honestly one of the best reward apps. I withdrew $10 via Vodafone Cash and it arrived super fast. The games are actually fun too."</p>
                 </div>
-                <div class="glass-panel p-6 rounded-2xl">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center text-white font-bold">SJ</div>
-                        <div>
-                            <div class="text-white font-bold text-sm">Sarah Jenkins</div>
-                            <div class="flex text-yellow-500 text-[10px]"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        </div>
-                    </div>
-                    <p class="text-sm text-gray-400 italic">"I use it during my commute. The math quiz pays well and I love the dark theme. Recommended."</p>
-                </div>
-                <div class="glass-panel p-6 rounded-2xl">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center text-white font-bold">KM</div>
-                        <div>
-                            <div class="text-white font-bold text-sm">Khaled M.</div>
-                            <div class="flex text-yellow-500 text-[10px]"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        </div>
-                    </div>
-                    <p class="text-sm text-gray-400 italic">"Best referral system I've seen. I invited 10 friends and we all got bonuses. Legit payout."</p>
-                </div>
-                <div class="glass-panel p-6 rounded-2xl">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center text-white font-bold">DR</div>
+                
+                <div class="glass-panel p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-purple-600 flex items-center justify-center text-white font-bold border border-white/10">DR</div>
                         <div>
                             <div class="text-white font-bold text-sm">David Ross</div>
-                            <div class="flex text-yellow-500 text-[10px]"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <div class="text-yellow-500 text-[10px]"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                         </div>
                     </div>
-                    <p class="text-sm text-gray-400 italic">"Cashout to PayPal was instant. No fake surveys, just clear tasks. Finally an app that works."</p>
+                    <p class="text-sm text-gray-300 leading-relaxed italic">"I usually never trust these apps but they actually paid me to InstaPay in about 2 days. The surveys are pretty easy to do while watching TV."</p>
                 </div>
-                <div class="glass-panel p-6 rounded-2xl">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center text-white font-bold">NH</div>
+
+                <div class="glass-panel p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-green-600 flex items-center justify-center text-white font-bold border border-white/10">KM</div>
                         <div>
-                            <div class="text-white font-bold text-sm">Nour H.</div>
-                            <div class="flex text-yellow-500 text-[10px]"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <div class="text-white font-bold text-sm">Khaled M.</div>
+                            <div class="text-yellow-500 text-[10px]"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                         </div>
                     </div>
-                    <p class="text-sm text-gray-400 italic">"ممتاز جداً! السحب فودافون كاش وصل بسرعة. (Excellent! Vodafone Cash withdrawal arrived fast.)"</p>
+                    <p class="text-sm text-gray-300 leading-relaxed italic">"Best referral system ever. I invited my friends and we all got bonuses. The app looks really clean and professional."</p>
                 </div>
-                <div class="glass-panel p-6 rounded-2xl">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center text-white font-bold">JP</div>
+
+                <div class="glass-panel p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="0">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center text-white font-bold border border-white/10">SJ</div>
                         <div>
-                            <div class="text-white font-bold text-sm">Jessica P.</div>
-                            <div class="flex text-yellow-500 text-[10px]"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <div class="text-white font-bold text-sm">Sarah J.</div>
+                            <div class="text-yellow-500 text-[10px]"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                         </div>
                     </div>
-                    <p class="text-sm text-gray-400 italic">"Clean UI, fast mining. I leave it running while I sleep and wake up to a few bucks."</p>
+                    <p class="text-sm text-gray-300 leading-relaxed italic">"I love that they added Telda. I requested a withdrawal and got it securely. I make most of my coins just watching videos on the train."</p>
+                </div>
+
+                <div class="glass-panel p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-yellow-600 flex items-center justify-center text-white font-bold border border-white/10">OM</div>
+                        <div>
+                            <div class="text-white font-bold text-sm">Omar T.</div>
+                            <div class="text-yellow-500 text-[10px]"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-300 leading-relaxed italic">"The daily spin wheel is great. Won a 2x multiplier yesterday and grinded out some offers. Cashout to USDT was very smooth."</p>
+                </div>
+
+                <div class="glass-panel p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-cyan-600 flex items-center justify-center text-white font-bold border border-white/10">NR</div>
+                        <div>
+                            <div class="text-white font-bold text-sm">Nour R.</div>
+                            <div class="text-yellow-500 text-[10px]"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-300 leading-relaxed italic">"Very easy to use app. No crashes, no weird permissions. Just play games, get coins, and cash out to PayPal. Simple as that."</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="faq" class="py-20 md:py-24 bg-black border-t border-white/5">
-        <div class="container mx-auto px-6 max-w-4xl">
+    <section id="faq" class="py-24 bg-[#080808] border-b border-white/5">
+        <div class="container mx-auto px-6 max-w-4xl" data-aos="fade-up">
             <h2 class="text-3xl font-black text-white mb-10 text-center">Frequently Asked Questions</h2>
             <div class="space-y-4">
                 <details class="group glass-panel rounded-2xl p-6 cursor-pointer">
-                    <summary class="flex justify-between items-center font-bold text-white list-none">
-                        How does the "Mining" feature work?
-                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down text-yellow-500"></i></span>
+                    <summary class="flex justify-between items-center font-bold text-white list-none outline-none">
+                        How much money can I really make?
+                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down text-green-500"></i></span>
                     </summary>
                     <p class="text-gray-400 text-sm mt-4 leading-relaxed">
-                        CashRank uses a simulated "Cloud Mining" protocol. You tap "Start Mining" on your dashboard, and our servers generate coins for you passively. You don't need to keep the app open 24/7. Just check in once every few hours to collect your earnings.
+                        It completely depends on how active you are! Some users earn a few extra dollars a week for casual play, while users who complete surveys daily and refer friends can earn much more. It's a great way to monetize your free time.
                     </p>
                 </details>
 
                 <details class="group glass-panel rounded-2xl p-6 cursor-pointer">
-                    <summary class="flex justify-between items-center font-bold text-white list-none">
-                        Is the Spin Wheel rigged?
-                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down text-yellow-500"></i></span>
+                    <summary class="flex justify-between items-center font-bold text-white list-none outline-none">
+                        What is the minimum amount to cash out?
+                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down text-green-500"></i></span>
                     </summary>
                     <p class="text-gray-400 text-sm mt-4 leading-relaxed">
-                        Absolutely not. Our Spin Wheel uses a provably fair algorithm. The outcomes are determined by random number generation on our secure servers, ensuring everyone has a fair chance to hit the Jackpot.
+                        We keep our minimum withdrawal thresholds very low so you can enjoy your rewards quickly. You can check the "Wallet" tab in the app to see the current minimum for your preferred method (like InstaPay, Vodafone Cash, or USDT).
                     </p>
                 </details>
 
                 <details class="group glass-panel rounded-2xl p-6 cursor-pointer">
-                    <summary class="flex justify-between items-center font-bold text-white list-none">
-                        How much can I earn daily?
-                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down text-yellow-500"></i></span>
+                    <summary class="flex justify-between items-center font-bold text-white list-none outline-none">
+                        How long does it take to get paid?
+                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down text-green-500"></i></span>
                     </summary>
                     <p class="text-gray-400 text-sm mt-4 leading-relaxed">
-                        Active users typically earn between $5 - $20 daily depending on their activity level. Using features like Scratch Cards, Math Quiz, and Daily Check-ins regularly will maximize your income.
+                        Most withdrawals are processed and sent to your account within 24 to 48 hours after our system verifies your tasks.
                     </p>
                 </details>
 
                 <details class="group glass-panel rounded-2xl p-6 cursor-pointer">
-                    <summary class="flex justify-between items-center font-bold text-white list-none">
-                        Is it free to join?
-                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down text-yellow-500"></i></span>
+                    <summary class="flex justify-between items-center font-bold text-white list-none outline-none">
+                        Is CashRank completely free to use?
+                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down text-green-500"></i></span>
                     </summary>
                     <p class="text-gray-400 text-sm mt-4 leading-relaxed">
-                        Yes, CashRank Prestige is 100% free. We will never ask you for payment to withdraw your earnings. We pay you from our advertising revenue share.
+                        Yes, 100% free! We will never ask you for a credit card. We make money by showing you ads and sponsored games from our partners, and we share that revenue directly with you.
                     </p>
                 </details>
 
                 <details class="group glass-panel rounded-2xl p-6 cursor-pointer">
-                    <summary class="flex justify-between items-center font-bold text-white list-none">
-                        Can I have multiple accounts?
-                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down text-yellow-500"></i></span>
+                    <summary class="flex justify-between items-center font-bold text-white list-none outline-none">
+                        Can I use a VPN to get more offers?
+                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down text-red-500"></i></span>
                     </summary>
                     <p class="text-gray-400 text-sm mt-4 leading-relaxed">
-                        No. Our "Titanium Security" policy strictly prohibits multiple accounts. We track device IDs and IP addresses. Using cloners, emulators, or VPNs to farm rewards will result in an immediate, permanent ban.
+                        <strong class="text-white">Strictly No.</strong> To keep our platform fair and ensure our advertising partners are happy, our backend anti-fraud system automatically detects and permanently bans any accounts using VPNs, Proxies, or Emulators. Play fair, and you'll get paid!
                     </p>
                 </details>
-                
-                <details class="group glass-panel rounded-2xl p-6 cursor-pointer">
-                    <summary class="flex justify-between items-center font-bold text-white list-none">
-                        What payment methods are supported?
-                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down text-yellow-500"></i></span>
-                    </summary>
-                    <p class="text-gray-400 text-sm mt-4 leading-relaxed">
-                        We support global payouts via PayPal, USDT (TRC20/ERC20), and local methods like Vodafone Cash, InstaPay, and Telda depending on your region.
-                    </p>
-                </details>
-            </div>
-
-            <div class="mt-12 text-center">
-                <p class="text-gray-500 text-sm mb-4">Still have questions?</p>
-                <a href="mailto:support@cashrank.online" class="inline-flex items-center gap-3 bg-white/5 hover:bg-yellow-500 hover:text-black border border-white/10 text-white px-8 py-4 rounded-xl font-bold transition duration-300">
-                    <i class="fas fa-envelope"></i> Contact Support
-                </a>
-                <p class="text-[10px] text-gray-600 mt-3 font-mono">support@cashrank.online</p>
             </div>
         </div>
     </section>
 
-    <section id="download" class="py-20 md:py-32 relative overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-r from-yellow-500/20 to-green-500/20 opacity-20"></div>
-        <div class="container mx-auto px-6 relative z-10 text-center">
-            <h2 class="text-4xl md:text-5xl lg:text-7xl font-black text-white mb-8 tracking-tighter">START EARNING <br> <span class="text-yellow-500">TODAY.</span></h2>
-            <div class="flex justify-center gap-6">
-                <a href="https://server.cashrank.online/download" class="bg-white text-black px-8 py-4 md:px-10 md:py-5 rounded-2xl font-bold text-base md:text-lg hover:scale-105 transition shadow-2xl flex items-center gap-3 cursor-pointer">
-                    <i class="fab fa-android text-green-600"></i> Download APK
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-black pt-20 pb-10 border-t border-white/10">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center mb-16">
+    <footer class="bg-black pt-16 pb-12 relative z-20">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-10 border-b border-white/10 pb-10">
                 <div class="mb-8 md:mb-0 text-center md:text-left">
-                    <div class="text-2xl font-black text-white tracking-tight">CASH<span class="text-yellow-500">RANK</span></div>
-                    <p class="text-xs text-gray-500 uppercase tracking-widest mt-2">The Gold Standard.</p>
+                    <div class="text-2xl font-black text-white tracking-tight flex items-center justify-center md:justify-start gap-2">
+                        <i class="fas fa-crown text-yellow-500"></i> CASH<span class="text-green-500">RANK</span>
+                    </div>
+                    <p class="text-sm text-gray-400 mt-2">Turn your free time into real cash.</p>
                 </div>
                 <div class="flex gap-4">
-                    <a href="#" class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-yellow-500 hover:text-black transition text-lg md:text-xl"><i class="fab fa-telegram"></i></a>
-                    <a href="#" class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-yellow-500 hover:text-black transition text-lg md:text-xl"><i class="fab fa-discord"></i></a>
-                    <a href="#" class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-yellow-500 hover:text-black transition text-lg md:text-xl"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="w-12 h-12 rounded-full bg-green-500/10 border border-green-500/30 flex items-center justify-center text-green-500 hover:bg-green-500 hover:text-black transition text-xl"><i class="fab fa-telegram"></i></a>
                 </div>
             </div>
             
-            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] font-bold uppercase tracking-widest text-gray-600 gap-4 md:gap-0">
-                <p>&copy; 2026 CashRank Prestige Global.</p>
-                <div class="flex gap-6">
-                    <a href="https://mrstudioapp.github.io/cashrank/privacy" class="hover:text-white transition">Privacy</a>
-                    <a href="https://mrstudioapp.github.io/cashrank/terms" class="hover:text-white transition">Terms</a>
-                    <a href="mailto:support@cashrank.online" class="hover:text-white transition">Support</a>
+            <div class="flex flex-col md:flex-row justify-between items-center text-gray-500 gap-8 md:gap-0">
+                <p class="text-sm font-semibold">&copy; 2026 CashRank. All rights reserved.</p>
+                
+                <div class="flex flex-col sm:flex-row gap-6 md:gap-10 text-center sm:text-left">
+                    <a href="/privacy" class="text-sm font-bold text-gray-300 hover:text-white underline decoration-green-500 decoration-2 underline-offset-4 transition">Privacy Policy</a>
+                    <a href="/terms" class="text-sm font-bold text-gray-300 hover:text-white underline decoration-green-500 decoration-2 underline-offset-4 transition">Terms of Service</a>
+                    <a href="mailto:support@cashrank.online" class="text-sm font-bold text-green-500 hover:text-green-400 transition">Contact Support</a>
                 </div>
             </div>
         </div>
@@ -650,68 +536,53 @@
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     
     <script>
-        // Init AOS
-        AOS.init({ duration: 800, once: true });
+        // Init AOS Animations
+        AOS.init({ duration: 800, once: true, offset: 50 });
 
-        // Init Swiper
+        // Init Swiper Carousel
         const swiper = new Swiper(".mySwiper", {
             slidesPerView: 1,
-            spaceBetween: 30,
+            spaceBetween: 20,
             pagination: { el: ".swiper-pagination", clickable: true },
             breakpoints: {
-                640: { slidesPerView: 2 },
-                1024: { slidesPerView: 3 },
+                768: { slidesPerView: 2, spaceBetween: 30 },
+                1024: { slidesPerView: 3, spaceBetween: 30 },
             },
-            autoplay: { delay: 3000, disableOnInteraction: false }
+            autoplay: { delay: 3500, disableOnInteraction: false }
         });
 
-        // Init Particles
+        // Init Particles (Gold and Green mix)
         particlesJS("particles-js", {
             "particles": {
-                "number": { "value": 40 },
-                "color": { "value": "#FFD700" },
-                "opacity": { "value": 0.2 },
+                "number": { "value": 30 },
+                "color": { "value": ["#FFD700", "#22c55e"] },
+                "opacity": { "value": 0.3 },
                 "size": { "value": 3 },
-                "line_linked": { "enable": true, "color": "#ffffff", "opacity": 0.05 },
-                "move": { "enable": true, "speed": 1 }
+                "line_linked": { "enable": false },
+                "move": { "enable": true, "speed": 1, "direction": "top" }
             },
             "interactivity": {
-                "events": { "onhover": { "enable": true, "mode": "repulse" } }
+                "events": { "onhover": { "enable": false } }
             }
         });
 
-        /* =========================================
-           SMART TICKER GENERATOR (PRESERVED)
-        ========================================= */
+        // Live Payout Ticker
         const tickerContainer = document.getElementById('dynamic-ticker');
-        const rawNames = [
-            "Ahmed_M", "Sarah_K", "Omar_99", "Jessica_P", "Hassan_Y", 
-            "Mike_R", "Laila_S", "David_B", "Karim_E", "Jennifer_L", 
-            "Youssef_1", "Chris_T", "Nour_A", "Emily_W", "Tarek_Z", 
-            "Robert_D", "Rana_F", "Daniel_H", "Fares_K", "Lisa_M", 
-            "Dina_H", "William_S", "Mahmoud_E", "Ashley_C", "Mostafa_G",
-            "James_P", "Salma_N", "Brian_K", "Ali_O", "Megan_R",
-            "Hana_M", "Kevin_J", "Ibrahim_S", "Amanda_B", "Ziad_T",
-            "Thomas_F", "Mariam_K", "Joseph_G", "Amr_H", "Nicole_A"
+        const rawNames = ["Ahmed_M", "Sarah_K", "Omar_99", "Jessica_P", "Hassan_Y", "Mike_R", "Laila_S", "David_B", "Karim_E", "Nour_A"];
+        const methods = [
+            { name: "PayPal", color: "text-blue-400" },
+            { name: "InstaPay", color: "text-purple-400" },
+            { name: "Vodafone Cash", color: "text-red-500" },
+            { name: "Telda", color: "text-cyan-400" },
+            { name: "USDT", color: "text-green-500" }
         ];
-        
+
         function shuffleArray(array) {
             for (let i = array.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
                 [array[i], array[j]] = [array[j], array[i]];
             }
         }
-
-        const methods = [
-            { name: "PayPal", color: "text-blue-400" },
-            { name: "InstaPay", color: "text-purple-400" },
-            { name: "Vodafone Cash", color: "text-red-500" },
-            { name: "Telda", color: "text-cyan-400" },
-            { name: "USDT-20", color: "text-green-500" }
-        ];
-
-        function getRandomItem(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
-        function getRandomInt(min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; }
 
         function generateTickerItems() {
             let html = "";
@@ -720,13 +591,13 @@
 
             for(let i = 0; i < 30; i++) {
                 const name = shuffledNames[i % shuffledNames.length];
-                const method = getRandomItem(methods);
-                const amount = getRandomInt(1, 20) + ".00";
+                const method = methods[Math.floor(Math.random() * methods.length)];
+                const amount = Math.floor(Math.random() * (30 - 5 + 1)) + 5 + ".00";
                 
                 html += `
                 <span class="ticker-item">
-                    <i class="fas fa-circle-check text-green-500 text-[8px]"></i> 
-                    <span>USER: <strong class="text-gray-300">${name}</strong> RECIEVED <strong class="text-white">$${amount}</strong> VIA <strong class="${method.color}">${method.name}</strong></span>
+                    <i class="fas fa-check-circle text-green-500"></i> 
+                    <span>User <span class="text-white">${name}</span> just withdrew <span class="text-green-400 font-black">$${amount}</span> via <span class="${method.color}">${method.name}</span></span>
                 </span>
                 `;
             }
@@ -735,6 +606,5 @@
 
         generateTickerItems();
     </script>
-    
 </body>
 </html>
